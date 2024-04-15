@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mad Lib</title>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1f1e1e;
+      margin: 0;
+      padding: 0;
+      color: #ffffff;
+    }
+  
+    h1 {
+      text-align: center;
+      margin-top: 10px;
+    }
+  
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .text-container {
+      flex: 4;
+     
+    }
+  
+    form {
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+  
+    label {
+      font-weight: bold;
+      color: #333333;
+    }
+  
+    input[type="text"] {
+      width: calc(100% - 20px);
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+    }
+  
+    .center-button {
+      text-align: center;
+    }
+  
+    button[type="submit"] {
+      padding: 10px 20px;
+      background-color: #040404;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  
+    button[type="submit"]:hover {
+      background-color: #dde3dd;
+    }
+  
+    footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mad Lib</h1>
+
+  <div class="content">
+    <div class="text-container">
+      <form id="madLibForm" action="/submit" method="post">
+        <label for="noun">Noun:</label>
+        <input type="text" id="noun" name="noun"><br><br>
+        <label for="verb">Verb:</label>
+        <input type="text" id="verb" name="verb"><br><br>
+        <label for="adjective">Adjective:</label>
+        <input type="text" id="adjective" name="adjective"><br><br>
+        <label for="place">Place:</label>
+        <input type="text" id="place" name="place"><br><br>
+        <label for="animal">Animal:</label>
+        <input type="text" id="animal" name="animal"><br><br>
+        <label for="ghost">Ghost:</label>
+        <input type="text" id="ghost" name="ghost"><br><br>
+        
+        <div class="center-button">
+          <button type="submit">Generate Mad Lib</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>Last updated: 
+        <span id="lastModified"></span>
+    </p>
+  </footer>
+
+  <script>
+    var x = document.lastModified;
+    document.getElementById('lastModified').textContent = x;
+  </script>
+
+  <div id="madLibOutput" class="text-container"></div>
+</body>
+</html>
