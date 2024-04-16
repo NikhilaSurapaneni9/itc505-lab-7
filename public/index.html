@@ -5,75 +5,100 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mad Lib</title>
 <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #1f1e1e;
-      margin: 0;
-      padding: 0;
-      color: #ffffff;
-    }
-  
-    h1 {
-      text-align: center;
-      margin-top: 10px;
-    }
-  
-    .content {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-  
-    .text-container {
-      flex: 4;
-     
-    }
-  
-    form {
-      padding: 20px;
-      background-color: #ffffff;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-    }
-  
-    label {
-      font-weight: bold;
-      color: #333333;
-    }
-  
-    input[type="text"] {
-      width: calc(100% - 20px);
-      padding: 8px;
-      margin-bottom: 10px;
-      border: 1px solid #cccccc;
-      border-radius: 4px;
-    }
-  
-    .center-button {
-      text-align: center;
-    }
-  
-    button[type="submit"] {
-      padding: 10px 20px;
-      background-color: #040404;
-      color: #ffffff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-  
-    button[type="submit"]:hover {
-      background-color: #dde3dd;
-    }
-  
-    footer {
-      text-align: center;
-      margin-top: 20px;
-    }
-  </style>
+  /* General styles */
+  body {
+    font-family: cursive;
+    background-color: #10100f; /* Dark background */
+    margin: 0;
+    padding: 0;
+    color: #c5c5ca; /* pght text color */
+    font-size: 16px; /* Base font size */
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 20px; /* Increased margin for the header */
+    color: #f1f0f0; /* pght title color */
+    font-size: 60px; /* Larger font size for the header */
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  .content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .text-container {
+    flex: 4;
+  }
+
+  /* Form styles */
+  form {
+    padding: 20px;
+    background-color: #3f3f3d; /* Dark form background */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+
+  label {
+    font-weight: bold;
+    color: #ece8e8c6; /* pght label color */
+  }
+
+  input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px sopd #cccccc; /* pght gray border */
+    border-radius: 4px;
+    font-size: 14px; /* Smaller font size for input fields */
+  }
+
+  .center-button {
+    text-align: center;
+  }
+
+  button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #040404; /* Dark button color */
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px; /* Larger font size for the button */
+  }
+
+  button[type="submit"]:hover {
+    background-color: #dde3dd; /* pght green on hover */
+  }
+
+  /* Footer styles */
+  footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #ab0707; /* Medium gray footer text color */
+  }
+
+  /* Header styles */
+  header {
+    background-color: #040404; /* Dark header background color */
+    padding: 10px 0;
+  }
+  .addendum {
+    text-align: center;
+    padding: 20px;
+    color: #c5c5ca;
+}
+
+.addendum p {
+    margin-bottom: 10px;
+    color: #c5c5ca;
+}
+</style>
 </head>
 <body>
   <h1>Mad Lib</h1>
@@ -81,9 +106,12 @@
   <div class="content">
     <div class="text-container">
       <form id="madLibForm" action="/submit" method="post">
+        <!-- Form fields -->
         <label for="noun">Noun:</label>
         <input type="text" id="noun" name="noun"><br><br>
-        <label for="verb">Verb:</label>
+        <label for="verb">Verb:
+          
+        </label>
         <input type="text" id="verb" name="verb"><br><br>
         <label for="adjective">Adjective:</label>
         <input type="text" id="adjective" name="adjective"><br><br>
@@ -94,6 +122,7 @@
         <label for="ghost">Ghost:</label>
         <input type="text" id="ghost" name="ghost"><br><br>
         
+        <!-- Submit button -->
         <div class="center-button">
           <button type="submit">Generate Mad Lib</button>
         </div>
@@ -101,17 +130,100 @@
     </div>
   </div>
 
+  <!-- Footer -->
   <footer>
-    <p>Last updated: 
-        <span id="lastModified"></span>
-    </p>
+    <!-- Addendum explaining structure and functionapty -->
+    <div class="addendum">
+      <p>
+        <center><strong>Addendum:</strong></center>
+      </p>
+      <p>
+        This HTML code provides a simple interface for generating Mad Libs:
+      </p>
+      <ol>
+        <p>
+          <strong>Structure:</strong>
+          <ul>
+            <p>The document starts with the <!DOCTYPE html> declaration, indicating it's an HTML5 document.</p>
+            <p>Inside the <code>&lt;head&gt;</code> section, we have metadata such as character set, viewport settings, and the page title.</p>
+            <p>The <code>&lt;style&gt;</code> section contains CSS styles for styling various elements on the page.</p>
+            <p>In the <code>&lt;body&gt;</code> section, the content of the page is structured using semantic HTML elements like <code>&lt;h1&gt;</code>, <code>&lt;form&gt;</code>, and <code>&lt;footer&gt;</code>.</p>
+          </ul>
+        </p>
+        <p>
+          <strong>Form:</strong>
+          <ul>
+            <p>The form allows users to input various words needed to generate a Mad lib, such as a noun, verb, adjective, place, animal, and ghost.</p>
+            <p>Each input field is labeled appropriately using <code>&lt;label&gt;</code> elements.</p>
+            <p>The form submits data to the <code>/submit</code> route via HTTP POST method when the "Generate Mad Lib" button is clicked.</p>
+          </ul>
+        </p>
+        <p>
+          <strong>Footer:</strong>
+          <ul>
+            <p>The footer section contains information about the last modification date of the document.</p>
+            <p>It utilizes JavaScript to dynamically display the last modified date.</p>
+          </ul>
+        </p>
+        <p>
+          <strong>JavaScript:</strong>
+          <ul>
+            <p>A simple JavaScript script is included at the end of the document to display the last modified date in the footer.</p>
+          </ul>
+        </p>
+        <p>
+          <strong>Mad Lib Output:</strong>
+          <ul>
+            <p>There's a placeholder <code>&lt;div&gt;</code> with the ID <code>madlibOutput</code> intended to display the generated Mad Lib. Currently, it's empty until the form is submitted and processed.</p>
+          </ul>
+        </p>
+        <p>
+          <strong>This Express server code provides functionality for handling form submissions to generate Mad Libs:</strong>
+        </p>
+        <ol>
+          <p>
+            <strong>Middleware:</strong>
+            <ul>
+              <p>Utilizes middleware to parse URL-encoded form data and log HTTP requests.</p>
+            </ul>
+          </p>
+          <p>
+            <strong>POST route handler:</strong>
+            <ul>
+              <p>Defines a POST route '/submit' to handle form submissions.</p>
+              <p>Retrieves form data (noun, verb, adjective, place, animal, ghost) from the request body.</p>
+              <p>Validates if all fields are filled; if not, returns an error message.</p>
+              <p>Constructs a Mad Lib using the form data.</p>
+              <p>Sends the filled-in Mad Lib as the HTTP response.</p>
+            </ul>
+          </p>
+          <p>
+            <strong>Static file serving:</strong>
+            <ul>
+              <p>Serves static files ( HTML, CSS) from the 'public' directory.</p>
+            </ul>
+          </p>
+          <p>
+            <strong>Server initialization:</strong>
+            <ul>
+              <p>Sets the server to listen on port 8080 (or the provided environment port).</p>
+              <p>Logs a message indicating the server is running and on which port.</p>
+            </ul>
+          </p>
+        
+    
+      </ol>
+    </div>
+    <p>Last updated: <span id="lastModified"></span></p>
   </footer>
 
+  <!-- JavaScript to display last modified date -->
   <script>
     var x = document.lastModified;
     document.getElementById('lastModified').textContent = x;
   </script>
 
-  <div id="madLibOutput" class="text-container"></div>
+  <!-- Placeholder for displaying Mad Lib output -->
+  <div id="mad LibOutput" class="text-container"></div>
 </body>
 </html>

@@ -17,8 +17,8 @@ server.post('/submit', (req, res) => {
     if (!noun || !verb || !adjective || !place || !animal || !ghost) {
         return res.send(`
             <h1>Submission Failed</h1>
-            <p>Please fill out ALL fields</p>
-            <a href="/">Go Back to Form</a>
+            <p>Please Fill All the Fields</p>
+            <a href="/">Go Back to Main Page</a>
         `);
     }
 
@@ -30,7 +30,7 @@ server.post('/submit', (req, res) => {
     res.send(`
         <h1>Mad Lib Generated</h1>
         <p>${madLib}</p>
-        <a href="/">Go Back to Form</a>
+        <a href="/">Go Back to Main Page</a>
     `);
 });
 
